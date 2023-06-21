@@ -27,7 +27,7 @@ Cloudflare_IP = 'plos.org'   # plos.org (can be any dirty cloudflare ip)
 
 Cloudflare_port = 2053
 
-num_fragment = 1  # total number of chunks that ClientHello devided into (chunks with random size)
+num_fragment = 67  # total number of chunks that ClientHello devided into (chunks with random size)
 fragment_sleep = 0.008  # sleep between each fragment to make GFW-cache full so it forget previous chunks. LOL.
 
 
@@ -135,7 +135,7 @@ def send_data_in_fragment(data , sock):
     L_data = len(data)
     indices = random.sample(range(1,L_data-1), num_fragment-1)
     indices.sort()
-    print('indices=',indices)
+    #print('indices=',indices)
 
     i_pre=0
     for i in indices:
