@@ -1,1 +1,1 @@
-SimpleHTTPServer
+simple-http-server
