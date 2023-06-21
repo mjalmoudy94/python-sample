@@ -1,11 +1,7 @@
-import SimpleHTTPServer
-import SocketServer
+from simple_http_server import route, server
+    
+@route("/")
+def index():
+    return {"hello": "world"}   
 
-PORT = 8000
-
-Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-
-httpd = SocketServer.TCPServer(("", PORT), Handler)
-
-print ("serving at port", PORT)
-httpd.serve_forever()
+server.start(port=9090)
