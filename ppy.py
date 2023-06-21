@@ -27,7 +27,7 @@ Cloudflare_IP = 'plos.org'   # plos.org (can be any dirty cloudflare ip)
 
 Cloudflare_port = 2053
 
-num_fragment = 500  # total number of chunks that ClientHello devided into (chunks with random size)
+num_fragment = 1  # total number of chunks that ClientHello devided into (chunks with random size)
 fragment_sleep = 0.008  # sleep between each fragment to make GFW-cache full so it forget previous chunks. LOL.
 
 
